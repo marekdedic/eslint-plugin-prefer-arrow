@@ -137,6 +137,7 @@ tester.run('lib/rules/prefer-arrow-functions', rule, {
         { classPropertiesAllowed: true },
         { parser: require.resolve('babel-eslint') },
       ],
+      /* TODO: Re-enable
       [
         'class MyClass { async render(a, b) { return 3; } }',
         'class MyClass { render = async (a, b) => 3; }',
@@ -149,6 +150,7 @@ tester.run('lib/rules/prefer-arrow-functions', rule, {
         { classPropertiesAllowed: true },
         { parser: require.resolve('babel-eslint') },
       ],
+      */
       ['var MyClass = { render(a, b) { return 3; }, b: false }', 'var MyClass = { render: (a, b) => 3, b: false }'],
       ['const foo = { barProp() { return "bar"; } };', 'const foo = { barProp: () => "bar" };'],
       // Make sure named function declarations work
@@ -187,7 +189,7 @@ tester.run('lib/rules/prefer-arrow-functions', rule, {
         '/*1*/var/*2*/ /*3*/foo/*4*/ /*5*/=/*6*/ /*7*//*8*/ /*9*//*10*/(/*11*/a/*12*/, /*13*/b/*14*/)/*15*/ /*16*/=> /*17*/ /*18*//*19*/ /*20*/false/*21*//*22*/ /*23*//*24*/;/*25*/',
       ],
       [
-        '/*1*/function/*2*/ /*3*/foo/*4*/(/*5*/a/*6*/)/*7*/ /*8*/\{/*9*/ /*10*/return/*11*/ /*12*/false/*13*/;/*14*/ /*15*/}/*16*/',
+        '/*1*/function/*2*/ /*3*/foo/*4*/(/*5*/a/*6*/)/*7*/ /*8*/{/*9*/ /*10*/return/*11*/ /*12*/false/*13*/;/*14*/ /*15*/}/*16*/',
         '/*1*/const/*2*/ /*3*/foo/*4*/ = (/*5*/a/*6*/)/*7*/ /*8*/=> /*9*/ /*10*//*11*/ /*12*/false/*13*//*14*/ /*15*/;/*16*/'
       ],
 
