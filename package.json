@@ -4,6 +4,7 @@
   "description": "Prefer arrow functions in most cases",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint \"index.js\" \"lib/**/*\" \"test/**/*\"",
     "test": "nyc mocha test/lib/rules"
   },
   "repository": {
