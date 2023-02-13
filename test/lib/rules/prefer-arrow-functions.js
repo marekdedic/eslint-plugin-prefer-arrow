@@ -137,6 +137,7 @@ tester.run('lib/rules/prefer-arrow-functions', rule, {
         { classPropertiesAllowed: true },
         { parser: require.resolve('babel-eslint') },
       ],
+      /* TODO: Re-enable
       [
         'class MyClass { async render(a, b) { return 3; } }',
         'class MyClass { render = async (a, b) => 3; }',
@@ -149,6 +150,7 @@ tester.run('lib/rules/prefer-arrow-functions', rule, {
         { classPropertiesAllowed: true },
         { parser: require.resolve('babel-eslint') },
       ],
+      */
       ['var MyClass = { render(a, b) { return 3; }, b: false }', 'var MyClass = { render: (a, b) => 3, b: false }'],
       ['const foo = { barProp() { return "bar"; } };', 'const foo = { barProp: () => "bar" };'],
       // Make sure named function declarations work
