@@ -31,3 +31,6 @@ jobs:
       - name: "Run tests"
         run: |
           npm test
+
+      - name: "Upload coverage results"
+        uses: codecov/codecov-action@v3.1.1
