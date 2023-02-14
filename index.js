@@ -2,9 +2,9 @@
 
 module.exports = {
   rules: {
-    "prefer-arrow-functions": require("./lib/rules/prefer-arrow-functions"),
+    "prefer-arrow-function": require("./lib/rules/prefer-arrow-function"),
   },
   rulesConfig: {
-    "prefer-arrow-functions": [2],
+    "prefer-arrow-function": [2],
   },
 };
