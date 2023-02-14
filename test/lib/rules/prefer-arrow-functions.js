@@ -211,20 +211,18 @@ tester.run("lib/rules/prefer-arrow-functions", rule, {
         { classPropertiesAllowed: true },
         { parser: require.resolve("@babel/eslint-parser") },
       ],
-      /* TODO: Re-enable
       [
-        'class MyClass { async render(a, b) { return 3; } }',
-        'class MyClass { render = async (a, b) => 3; }',
+        "class MyClass { async render(a, b) { return 3; } }",
+        "class MyClass { render = async (a, b) => 3; }",
         { classPropertiesAllowed: true },
-        { parser: require.resolve('babel-eslint') },
+        { parser: require.resolve("@babel/eslint-parser") },
       ],
       [
-        'class MyClass {async render(a, b) { return 3; } }',
-        'class MyClass {render = async (a, b) => 3; }',
+        "class MyClass {async render(a, b) { return 3; } }",
+        "class MyClass {render = async (a, b) => 3; }",
         { classPropertiesAllowed: true },
-        { parser: require.resolve('babel-eslint') },
+        { parser: require.resolve("@babel/eslint-parser") },
       ],
-      */
       [
         "var MyClass = { render(a, b) { return 3; }, b: false }",
         "var MyClass = { render: (a, b) => 3, b: false }",
