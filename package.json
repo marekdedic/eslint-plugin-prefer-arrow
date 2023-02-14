@@ -1,18 +1,26 @@
 {
-  "name": "eslint-plugin-prefer-arrow",
+  "name": "eslint-plugin-prefer-arrow-function",
   "version": "1.2.3",
-  "description": "Prefer arrow functions in most cases",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint \"index.js\" \"lib/**/*\" \"test/**/*\"",
-    "test": "nyc --reporter=lcov mocha test/lib/rules"
+  "description": "Prefer ES arrow functions",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "es6",
+    "arrow-function"
+  ],
+  "homepage": "https://github.com/marekdedic/eslint-plugin-prefer-arrow-function#readme",
+  "bugs": {
+    "url": "https://github.com/marekdedic/eslint-plugin-prefer-arrow-function/issues"
   },
+  "license": "MIT",
+  "author": "Triston Jones <contact@tristonjones.com>",
+  "contributors": [
+    "Marek Dědič <developer@dedic.eu> (https://dedic.eu/)"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/TristonJ/eslint-plugin-prefer-arrow.git"
+    "url": "git+https://github.com/marekdedic/eslint-plugin-prefer-arrow-function.git"
   },
-  "author": "Triston Jones <contact@tristonjones.com>",
-  "license": "MIT",
   "peerDependencies": {
     "eslint": "^8.0.0"
   },
@@ -26,9 +34,9 @@
     "nyc": "^15.1.0",
     "typescript": "^4.9.5"
   },
-  "keywords": [
-    "eslint",
-    "eslint-plugin",
-    "es6"
-  ]
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint \"index.js\" \"lib/**/*\" \"test/**/*\"",
+    "test": "nyc --reporter=lcov mocha test/lib/rules"
+  }
 }

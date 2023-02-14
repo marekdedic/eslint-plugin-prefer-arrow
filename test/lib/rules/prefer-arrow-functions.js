@@ -1,5 +1,5 @@
 /**
- * @fileoverview Tests for prefer-arrow-functions rule.
+ * @fileoverview Tests for prefer-arrow-function rule.
  * @author Triston Jones
  */
 
@@ -11,11 +11,11 @@ const singleReturnOnly = (code, extraRuleOptions) => ({
   parserOptions: { sourceType: "module" },
 });
 
-var rule = require("../../../lib/rules/prefer-arrow-functions"),
+var rule = require("../../../lib/rules/prefer-arrow-function"),
   RuleTester = require("eslint").RuleTester;
 
 var tester = new RuleTester({ parserOptions: { ecmaVersion: 6 } });
-tester.run("lib/rules/prefer-arrow-functions", rule, {
+tester.run("lib/rules/prefer-arrow-function", rule, {
   parserOptions: { ecmaVersion: 6 },
   valid: [
     "var foo = (bar) => bar;",

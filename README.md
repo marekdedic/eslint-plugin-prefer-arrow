@@ -1,4 +1,4 @@
-# eslint-plugin-prefer-arrow
+# eslint-plugin-prefer-arrow-function
 ESLint plugin to prefer arrow functions. By default, the plugin allows usage of `function` as a member of an Object's prototype, but this can be changed with the property `disallowPrototype`. Functions referencing `this` will also be allowed. Alternatively, with the `singleReturnOnly` option, this plugin only reports functions where converting to an arrow function would dramatically simplify the code.
 
 Class methods will not produce errors unless the `classPropertiesAllowed` flag is set.
@@ -10,19 +10,19 @@ This plugin will automatically fix your code using ESLint's `--fix` option, as l
 Install the npm package
 ```bash
 # If eslint is installed globally
-npm install -g eslint-plugin-prefer-arrow
+npm install -g eslint-plugin-prefer-arrow-function
 
 # If eslint is installed locally
-npm install -D eslint-plugin-prefer-arrow
+npm install -D eslint-plugin-prefer-arrow-function
 ```
 
 Add the plugin to the `plugins` section and the rule to the `rules` section in your .eslintrc
 ```js
 "plugins": [
-  "prefer-arrow"
+  "prefer-arrow-function"
 ],
 "rules": {
-  "prefer-arrow/prefer-arrow-functions": [
+  "prefer-arrow-function/prefer-arrow-function": [
     "warn",
     {
       "disallowPrototype": true,
