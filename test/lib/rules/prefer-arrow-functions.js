@@ -93,7 +93,7 @@ tester.run('lib/rules/prefer-arrow-functions', rule, {
     {
       code: 'class MyClass { constructor() { this.x = 0; } add = (y) => { this.x += y; }; }',
       options: [{ classPropertiesAllowed: true }],
-      parser: require.resolve('babel-eslint')
+      parser: require.resolve('@babel/eslint-parser')
     }
   ],
   invalid: [
@@ -135,7 +135,7 @@ tester.run('lib/rules/prefer-arrow-functions', rule, {
         'class MyClass { render(a, b) { return 3; } }',
         'class MyClass { render = (a, b) => 3; }',
         { classPropertiesAllowed: true },
-        { parser: require.resolve('babel-eslint') },
+        { parser: require.resolve('@babel/eslint-parser') },
       ],
       /* TODO: Re-enable
       [
@@ -281,7 +281,6 @@ tester.run('lib/rules/prefer-arrow-functions', rule, {
       code: 'class MyClass { constructor() { this.x = 0; } add(y) { this.x += y; } }',
       errors: ['Prefer using arrow functions over plain functions'],
       options: [{ classPropertiesAllowed: true }],
-      parser: require.resolve('babel-eslint')
     }
   ]
 });
